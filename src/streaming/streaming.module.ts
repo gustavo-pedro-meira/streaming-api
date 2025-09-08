@@ -8,5 +8,6 @@ import { Streaming } from './entities/streaming.entity';
   imports: [TypeOrmModule.forFeature([Streaming])],
   controllers: [StreamingController],
   providers: [StreamingService],
+  exports: [StreamingService],
 })
 export class StreamingModule {}
