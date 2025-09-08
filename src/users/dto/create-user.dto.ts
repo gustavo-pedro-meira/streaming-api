@@ -1,7 +1,14 @@
-import { IsNotEmpty, IsUUID } from "class-validator";
+import { IsEmail, IsNotEmpty, IsString, MinLength } from "class-validator";
 
 export class CreateUserDto {
-    @IsNotEmpty()
-    @IsUUID()
-    mediaId: string;
+  @IsNotEmpty()
+  @IsString()
+  username: string;
+
+  @IsNotEmpty()
+  @IsEmail()
+  email: string;
+
+  @MinLength(7)
+  password: string;
 }

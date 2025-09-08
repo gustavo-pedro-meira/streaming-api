@@ -1,4 +1,4 @@
-import { Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { Streaming } from '../../streaming/entities/streaming.entity';
 
 @Entity('users')
@@ -15,4 +15,13 @@ export class User {
     inverseJoinColumn: { name: 'streaming_id' },
   })
   favorites: Streaming[];
+
+  @Column()
+  username: string;
+
+  @Column({ unique: true })
+  email: string;
+
+  @Column()
+  password: string;
 }
