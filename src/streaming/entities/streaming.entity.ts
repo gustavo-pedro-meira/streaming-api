@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 import { StreamingType } from './streaming-type.entity';
 
-@Entity()
+@Entity('streamings')
 export class Streaming {
   @PrimaryGeneratedColumn('uuid')
   id: string;
