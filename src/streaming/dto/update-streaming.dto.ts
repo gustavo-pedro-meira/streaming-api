@@ -8,7 +8,7 @@ import {
   IsOptional,
 } from 'class-validator';
 
-export class CreateStreamingDto {
+export class UpdateStreamingDto {
   @IsNotEmpty()
   @MinLength(3)
   @IsString()
@@ -19,7 +19,7 @@ export class CreateStreamingDto {
   @IsOptional()
   description?: string;
 
-  @IsEnum()
+  @IsEnum(StreamingType)
   @IsNotEmpty()
   @IsOptional()
   type?: StreamingType;
@@ -31,7 +31,7 @@ export class CreateStreamingDto {
 
   @MinLength(3)
   @IsString()
-  @IsNotEmpty(StreamingType)
+  @IsNotEmpty()
   @IsOptional()
   genre?: string;
 }

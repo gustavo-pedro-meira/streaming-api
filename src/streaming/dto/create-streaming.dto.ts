@@ -16,7 +16,7 @@ export class CreateStreamingDto {
   @IsString()
   description: string;
 
-  @IsEnum()
+  @IsEnum(StreamingType)
   @IsNotEmpty()
   type: StreamingType;
 
@@ -26,6 +26,6 @@ export class CreateStreamingDto {
 
   @MinLength(3)
   @IsString()
-  @IsNotEmpty(StreamingType)
+  @IsNotEmpty()
   genre: string;
 }
