@@ -1,26 +1,40 @@
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
 import { CreateStreamingDto } from './dto/create-streaming.dto';
 import { UpdateStreamingDto } from './dto/update-streaming.dto';
+import { Repository } from 'typeorm';
+import { Streaming } from './entities/streaming.entity';
 
 @Injectable()
 export class StreamingService {
+  constructor(
+    @InjectRepository(Streaming)
+    private streamingRepository: Repository<Streaming>,
+  ) {}
+
   create(createStreamingDto: CreateStreamingDto) {
-    return 'This action adds a new streaming';
+    const streaming = this.streamingRepository.create(createStreamingDto);
+    return this.streamingRepository.save(streaming);
   }
 
   findAll() {
-    return `This action returns all streaming`;
+    return this.streamingRepository.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} streaming`;
+  findOne(id: string) {
+    return this.streamingRepository.findOneBy({ id });
   }
 
-  update(id: number, updateStreamingDto: UpdateStreamingDto) {
-    return `This action updates a #${id} streaming`;
+  async update(id: string, updateStreamingDto: UpdateStreamingDto) {
+    const streaming = await this.streamingRepository.findOneBy({ id });
+    if (!streaming) return null;
+    this.streamingRepository.merge(streaming, updateStreamingDto);
+    return this.streamingRepository.save(streaming);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} streaming`;
+  async remove(id: string) {
+    const streaming = await this.streamingRepository.findOneBy({ id });
+    if (!streaming) return null;
+    return this.streamingRepository.remove(streaming);
   }
 }
