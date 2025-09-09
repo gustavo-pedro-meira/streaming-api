@@ -49,6 +49,12 @@ A escolha pelo **NestJS** se deu por sua arquitetura organizada e bem definida, 
 
 ---
 
+## EndPoints
+<img width="1810" height="403" alt="image" src="https://github.com/user-attachments/assets/045dde11-618b-4384-91b3-c3c9db4867b9" />
+<img width="1807" height="338" alt="image" src="https://github.com/user-attachments/assets/948c56dc-807a-4d81-9ba8-e8f0ca71907a" />
+
+
+
 ## 🧪 Rodando os Testes
 Para executar os testes automatizados, utilize o seguinte comando:
 ```bash
