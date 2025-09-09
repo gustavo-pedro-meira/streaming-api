@@ -30,11 +30,12 @@ A escolha pelo **NestJS** se deu por sua arquitetura organizada e bem definida, 
 
 ---
 
-## Como Começar
+## Como Rodar
+    A aplicação só é possivel rodar utilizando o Docker.
 
 1.  **Clone o Repositório**
     ```bash
-    git clone [https://github.com/gustavo-pedro-meira/streaming-api.git](https://github.com/gustavo-pedro-meira/streaming-api.git)
+    git clone https://github.com/gustavo-pedro-meira/streaming-api
     ```
 
 2.  **Suba os Containers Docker**
