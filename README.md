@@ -6,14 +6,14 @@
 
 ---
 
-## 📝 Sobre o Projeto
+## Sobre o Projeto
 Esta é uma API RESTful para um sistema de Streaming, onde um usuário pode selecionar quais são seus serviços de streaming favoritos. A aplicação permite criar, ler, atualizar e deletar (CRUD) filmes e séries. Também é possível para um usuário definir e remover seus streamings favoritos.
 
 O objetivo principal é fornecer um backend organizado, funcional e escalável. Para facilitar a visualização e os testes dos endpoints, a documentação com **Swagger** foi implementada e está disponível na rota `/api`.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - **Framework:** NodeJS + NestJS
 - **Banco de Dados:** PostgreSQL
 - **Containerização:** Docker e Docker Compose
@@ -23,14 +23,14 @@ A escolha pelo **NestJS** se deu por sua arquitetura organizada e bem definida, 
 
 ---
 
-## 🔥 Pré-Requisitos
+## Pré-Requisitos
 - ✅ [NodeJS](https://nodejs.org/en/)
 - ✅ [Docker e Docker Compose](https://www.docker.com/products/docker-desktop/)
 - ✅ (Opcional) [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/) para testes de API
 
 ---
 
-## 🚀 Como Começar
+## Como Começar
 
 1.  **Clone o Repositório**
     ```bash
@@ -55,7 +55,7 @@ A escolha pelo **NestJS** se deu por sua arquitetura organizada e bem definida, 
 
 
 
-## 🧪 Rodando os Testes
+## Rodando os Testes
 Para executar os testes automatizados, utilize o seguinte comando:
 ```bash
 npm test
