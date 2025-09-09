@@ -1,98 +1,83 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming API README</title>
+</head>
+<body>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+    <h1 align="center">API RESTful para Sistema de Streaming</h1>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
     <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+        Uma API RESTful para um sistema de streaming que permite aos usuários gerenciar filmes, séries e suas plataformas de streaming favoritas.
+    </p>
 
-## Description
+    <hr>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+    <h2>&#x1F4DC; Sobre o Projeto</h2>
+    <p>
+        Esta é uma API RESTful para um sistema de Streaming, onde um usuário pode selecionar quais são seus serviços de streaming favoritos. A aplicação permite criar, ler, atualizar e deletar (CRUD) filmes e séries. Também é possível para um usuário definir e remover seus streamings favoritos.
+    </p>
+    <p>
+        O objetivo principal é fornecer um backend organizado, funcional e escalável. Para facilitar a visualização e os testes dos endpoints, a documentação com <strong>Swagger</strong> foi implementada e está disponível na rota <code>/api</code>.
+    </p>
 
-## Project setup
+    <hr>
 
-```bash
-$ npm install
-```
+    <h2>&#x1F6E0;&#xFE0F; Tecnologias Utilizadas</h2>
+    <ul>
+        <li><strong>Framework:</strong> NodeJS + NestJS</li>
+        <li><strong>Banco de Dados:</strong> PostgreSQL</li>
+        <li><strong>Containerização:</strong> Docker e Docker Compose</li>
+        <li><strong>Linguagem:</strong> TypeScript</li>
+    </ul>
+    <p>
+        A escolha pelo <strong>NestJS</strong> se deu por sua arquitetura organizada e bem definida, que facilita a manutenção e a escalabilidade da aplicação, além do forte uso de TypeScript. Optei pelo <strong>PostgreSQL</strong> por ser um sistema de gerenciamento de banco de dados relacional robusto e confiável.
+    </p>
 
-## Compile and run the project
+    <hr>
 
-```bash
-# development
-$ npm run start
+    <h2>&#x1F525; Pré-Requisitos</h2>
+    <ul>
+        <li>&#x2714;&#xFE0F; <a href="https://nodejs.org/en/">NodeJS</a></li>
+        <li>&#x2714;&#xFE0F; <a href="https://www.docker.com/products/docker-desktop/">Docker e Docker Compose</a></li>
+        <li>&#x2714;&#xFE0F; (Opcional) <a href="https://www.postman.com/">Postman</a> ou <a href="https://insomnia.rest/">Insomnia</a> para testes de API</li>
+    </ul>
 
-# watch mode
-$ npm run start:dev
+    <hr>
 
-# production mode
-$ npm run start:prod
-```
+    <h2>&#x1F680; Como Começar</h2>
+    <ol>
+        <li>
+            <p><strong>Clone o Repositório</strong></p>
+            <pre><code>git clone https://github.com/gustavo-pedro-meira/streaming-api.git</code></pre>
+        </li>
+        <li>
+            <p><strong>Suba os Containers Docker</strong></p>
+            <p>Na raiz do projeto, execute o comando abaixo para iniciar a aplicação e o banco de dados:</p>
+            <pre><code>docker-compose up --build -d</code></pre>
+            <p>A API estará rodando em: <a href="http://localhost:3000">http://localhost:3000</a></p>
+            <p>A documentação do Swagger estará disponível em: <a href="http://localhost:3000/api">http://localhost:3000/api</a></p>
+        </li>
+    </ol>
 
-## Run tests
+    <hr>
 
-```bash
-# unit tests
-$ npm run test
+    <h2>&#x1F9EA; Rodando os Testes</h2>
+    <p>Para executar os testes automatizados, utilize o seguinte comando:</p>
+    <pre><code>npm test</code></pre>
 
-# e2e tests
-$ npm run test:e2e
+    <hr>
 
-# test coverage
-$ npm run test:cov
-```
+    <h2>&#x1F517; Endpoints da API</h2>
+    <p>Abaixo estão as imagens que descrevem os endpoints disponíveis na aplicação através do Swagger.</p>
 
-## Deployment
+    <h3>Endpoints de Autenticação e Usuários</h3>
+    <img width="100%" alt="Endpoints de Autenticação e Usuários" src="https://github.com/user-attachments/assets/1c74a712-2eb1-4fe7-8d30-212784232ebf" />
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+    <h3>Endpoints de Filmes, Séries e Streamings</h3>
+    <img width="100%" alt="Endpoints de Filmes, Séries e Streamings" src="https://github.com/user-attachments/assets/7dce874f-501b-427c-b7d2-096b88f8a91b" />
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+</body>
+</html>
